@@ -1,10 +1,10 @@
-import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
-import API from '../../API/index';
+
+import { useState, } from 'react';
+import { API } from '../../API';
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
+console.log(API)
   const handleLogin = async () => {
     try {
       const response = await fetch(`https://strangers-things.herokuapp.com/api/${COHORT_NAME}/users/login`, {

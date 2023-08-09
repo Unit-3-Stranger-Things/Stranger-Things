@@ -6,14 +6,16 @@ import Register from './components/Authorization/Register';
 
 function App() {
   return (
-    <BrowserRouter>
-    <Routes>
-      <NavBar />           
+    <>
+    <NavBar />   
+    <BrowserRouter>    
+    <Routes>              
         <Route exact path="/" component={Home} />
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />      
     </Routes>
     </BrowserRouter>
+    </>
   );
 }
 

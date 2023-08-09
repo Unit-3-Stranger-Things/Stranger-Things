@@ -1,7 +1,7 @@
 const COHORT_NAME = '2302-acc-pt-web-pt-d';
 const BASE_URL = `https://strangers-things.herokuapp.com/api/${COHORT_NAME}`;
 
-const API = {
+export const API = {
   login: async (email, password) => {
     try {
       const response = await fetch(`${BASE_URL}/users/login`, {
@@ -16,9 +16,7 @@ const API = {
           },
         }),
       });
-
       const data = await response.json();
-
       if (response.ok) {
         // Handle successful login
         return data;
@@ -58,4 +56,3 @@ const API = {
   // Add more API functions for various actions here
 };
 
-export default API;
