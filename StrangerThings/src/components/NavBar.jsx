@@ -4,6 +4,7 @@ function NavBar() {
   return (
     // navigation panel header
     <nav>
+        <div>Stranger Things Group 2</div>
       <ul>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/profile">Profile</Link></li>
