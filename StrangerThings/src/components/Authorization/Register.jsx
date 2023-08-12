@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+import BASE_URL from '../../API/index';
 
 function Register() {
   const [name, setName] = useState('');
@@ -7,10 +7,10 @@ function Register() {
   const [phone, setPhone] = useState('');
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-
+  console.log(BASE_URL)
   const handleRegister = async () => {
     try {
-      const response = await fetch(`https://strangers-things.herokuapp.com/api/${COHORT_NAME}/users/register`, {
+      const response = await fetch(`${BASE_URL}/users/register`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
