@@ -2,7 +2,7 @@ import React, { useState, } from 'react';
 import BASE_URL from "../../API/index.js";
 
 
-function NewPost () {
+export default function NewPost () {
     const [title, setTitle] = useState([]);
     const [description, setDescription] = useState([]);
   
@@ -35,5 +35,3 @@ function NewPost () {
 
     </>
   }
-  
-  export default NewPost;

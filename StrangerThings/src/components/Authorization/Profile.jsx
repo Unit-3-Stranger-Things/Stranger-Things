@@ -3,7 +3,7 @@ import BASE_URL from "../../API/index.js";
 
 const token = ""; //unsure how to link a token but setting as a placeholder
 
- function Profile() {
+export default function Profile() {
     const [posts, setPosts] = useState([]);
     const [messages, setMessages] = useState([]);
     const [userName, setUsername] = useState([]);
@@ -32,5 +32,3 @@ const token = ""; //unsure how to link a token but setting as a placeholder
       
       return 
 }
-
-export default Profile;
