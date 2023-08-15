@@ -8,6 +8,7 @@ function Register() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   console.log(BASE_URL)
+  
   const handleRegister = async () => {
     try {
       const response = await fetch(`${BASE_URL}/users/register`, {
