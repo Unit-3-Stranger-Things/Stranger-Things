@@ -1,10 +1,9 @@
 import React, { useState, useEffect} from 'react';
 import BASE_URL from "../../API/index.js";
 
-const token = "";
+const token = ""; //unsure how to link a token but setting as a placeholder
 
-
-const Profile = () => {
+ function Profile() {
     const [posts, setPosts] = useState([]);
     const [messages, setMessages] = useState([]);
     const [userName, setUsername] = useState([]);
@@ -34,4 +33,4 @@ const Profile = () => {
       return 
 }
 
-export default Me;
+export default Profile;
