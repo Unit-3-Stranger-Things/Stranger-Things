@@ -6,9 +6,9 @@ import Register from './components/Authorization/Register';
 
 function App() {
   return (
-    <>
-    <NavBar />   
-    <BrowserRouter>    
+    <>  
+    <BrowserRouter>
+    <NavBar/>    
     <Routes>              
         <Route exact path="/" component={Home} />
         <Route path="/login" component={Login} />
