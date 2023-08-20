@@ -1,9 +1,13 @@
-function Home() {
-  return (
-    <div>
-      <h2>Welcome to Stranger Things Online Marketplace!</h2>
-      {/* Display listings, posts, etc. */}
+const Home = () => {
+  return ( 
+    <>
+    <div >Navigate to Posts to see who is Selling</div>
+    <div id="homeTab">
+    <div className="home">
+      <h1 >Welcome to Stranger Things MERCH MarketPlace Online!</h1>      
+    </div>    
     </div>
+    </>     
   );
 }
 

@@ -42,15 +42,19 @@ function Register() {
   };
 
   return (
-    <div>
-      <h2>Sign-Up</h2>
+    <>
+    <div>Sign-Up</div>
+      <div id="homeTab">
+      <div className="home">
       <input type="text" placeholder="Name" value={name} onChange={e => setName(e.target.value)} />
       <input type="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} />
       <input type="tel" placeholder="Phone" value={phone} onChange={e => setPhone(e.target.value)} />
       <input type="text" placeholder="Username" value={username} onChange={e => setUsername(e.target.value)} />
       <input type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} />
-      <button onClick={handleRegister}>Register</button>
+      <button onClick={handleRegister} className='loginTab'>Register</button>
     </div>
+    </div>
+    </>
   );
 }
 
