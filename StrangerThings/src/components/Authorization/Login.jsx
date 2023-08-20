@@ -35,12 +35,16 @@ function Login() {
   };
 
   return (
-    <div>
-      <h2>Login</h2>
+    <>
+    <div >Login</div>
+    <div id="homeTab">
+    <div className="home">
       <input type="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} />
       <input type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} />
-      <button onClick={handleLogin}>Login</button>
+      <button onClick={handleLogin} className='loginTab'>Login</button>
     </div>
+    </div>
+    </>
   );
 }
 

@@ -1,18 +1,16 @@
 import { Link } from 'react-router-dom';
-
-function NavBar() {
+const NavBar=() =>{
   return (
-    // navigation panel header
-    <nav>
-        <div>Stranger Things Group 2</div>
-      <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/profile">Profile</Link></li>
-        <li><Link to="/post">Post</Link></li>
-        <li><Link to="/search">Search</Link></li>
-        <li><Link to="/logout">Sign Out</Link></li>              
-      </ul>
-    </nav>
+      // navigation panel header    
+      <div id='navbar'>     
+      <div><h2>Stranger Things</h2></div> 
+      <Link to="/Home" id='naviTab'>Home</Link>
+      <Link to="/Post" id='naviTab'>Post</Link>
+      <Link to="/messages" id='naviTab'>Messages</Link>
+      <Link to="/login" id='naviTab'>Sign In</Link>         
+      <Link to="/register" id='naviTab'>Register</Link>         
+       </div>
+  
   );
 }
 
