@@ -36,9 +36,9 @@ function Login() {
 
   return (
     <>
-    <div >Login</div>
-    <div id="homeTab">
+    <div id="homeTab">Please Log-in</div>
     <div className="home">
+    <div className="input-row">
       <input type="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} />
       <input type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} />
       <button onClick={handleLogin} className='loginTab'>Login</button>

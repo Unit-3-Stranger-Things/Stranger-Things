@@ -30,8 +30,7 @@ export default function Post({ token }) {
 
     return (
         <>
-        <div>Posts</div>
-        <div id="homeTab">  
+        <div id="homeTab">Posts</div>         
         <div className="home">
             <h1>Post Section </h1>
             <ul>
@@ -42,8 +41,7 @@ export default function Post({ token }) {
                     </li>
                 ))}
             </ul>    
-            </div>                          
-        </div>
+        </div>                          
         </>
     );
 }

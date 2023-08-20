@@ -1,22 +1,17 @@
-const Messages = () => {
-    return ( 
-        <>
-        <div >Navigate to Messages</div>
-        <div id="homeTab">
-        <div className="home">
-          <h1 >Messages Section!</h1>      
-        </div>    
-        </div>
-        </>     
-     );
-}
- 
-export default Messages;
-
-import React from "react";
-
-// Define a functional component for displaying a message
-const Message = (prop) => {
+// const Messages = () => {
+//     return ( 
+//         <>
+//         <div >Navigate to Messages</div>
+//         <div id="homeTab">
+//         <div className="home">
+//           <h1 >Messages Section!</h1>      
+//         </div>    
+//         </div>
+//         </>     
+//      );
+// }
+ // Define a functional component for displaying a message
+const Messages = (prop) => {
     // Extract message data from props
     const { message } = prop;
   
@@ -44,4 +39,4 @@ const Message = (prop) => {
   };
   
   // Export the Message component as the default export
-  export default Message;
+  export default Messages;
