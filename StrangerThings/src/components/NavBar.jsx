@@ -9,7 +9,7 @@ const NavBar=() =>{
       <Link to="/messages" id='naviTab'>Messages</Link>
       <Link to="/login" id='naviTab'>Sign In</Link>         
       <Link to="/register" id='naviTab'>Register</Link>         
-       </div>
+      </div>
   
   );
 }

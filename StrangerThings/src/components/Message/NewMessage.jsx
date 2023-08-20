@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 // Define a functional component for sending a new message
 const NewMessage = (props) => {

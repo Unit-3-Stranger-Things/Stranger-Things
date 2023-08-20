@@ -1,6 +1,3 @@
-import React from "react";
-import Message from "./Message";
-
 // Define a functional component for rendering a list of messages
 const MessagesList = (props) => {
     // Extract "data" property from "props.userData"

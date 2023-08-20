@@ -43,17 +43,33 @@ function Register() {
 
   return (
     <>
-    <div>Sign-Up</div>
-      <div id="homeTab">
+      <div id="homeTab">Sign-Up Here</div>
       <div className="home">
-      <input type="text" placeholder="Name" value={name} onChange={e => setName(e.target.value)} />
-      <input type="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} />
-      <input type="tel" placeholder="Phone" value={phone} onChange={e => setPhone(e.target.value)} />
-      <input type="text" placeholder="Username" value={username} onChange={e => setUsername(e.target.value)} />
-      <input type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} />
-      <button onClick={handleRegister} className='loginTab'>Register</button>
-    </div>
-    </div>
+        <table className="input-table">
+          <tbody>
+            <tr className="input-row">
+              <td>
+                <input type="text" placeholder="Name" value={name} onChange={e => setName(e.target.value)} />
+              </td>
+              <td>
+                <input type="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} />
+              </td>
+              <td>
+                <input type="tel" placeholder="Phone" value={phone} onChange={e => setPhone(e.target.value)} />
+              </td>
+              <td>
+                <input type="text" placeholder="Username" value={username} onChange={e => setUsername(e.target.value)} />
+              </td>
+              <td>
+                <input type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} />
+              </td>
+              <td>
+                <button onClick={handleRegister} className='loginTab'>Sign Up</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </>
   );
 }
