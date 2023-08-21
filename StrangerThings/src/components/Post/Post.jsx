@@ -1,47 +1,41 @@
-import { useState, useEffect } from "react";
-import BASE_URL from "../../API";
+// import { useState, useEffect } from 'react';
+// import authToken from '../../API/authToken';
+// import BASE_URL from '../../API/index';
 
-export default function Post({ token }) {
-    const [postList, setPostList] = useState([]);
+// const Post = () => {
+//   const [postList, setPostList] = useState([]);
 
-    useEffect(() => {
-        async function fetchPost() {
-            try {
-                const response = await fetch(`${BASE_URL}/post`, {
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Authorization': `Bearer ${token}`
-                    }
-                });
+//   useEffect(() => {
+//     fetch(BASE_URL, {
+//       headers: {
+//         'Authorization': `Bearer ${authToken}`
+//       }
+//     })
+//     .then(response => response.json())
+//     .then(data => {
+//       setPostList(data); // Assuming the response is an array of posts
+//     })
+//     .catch(error => {
+//       console.error('Error fetching data:', error);
+//     });
+//   }, []);
 
-                const result = await response.json();
-                console.log("Fetched posts:", result.data.posts);
-                setPostList(result.data.posts);
-            } catch (err) {
-                console.error("Error fetching posts:", err);
-            }
-        }
+//   return (
+//     <>
+//       <div id="homeTab">Posts</div>         
+//       <div className="home">
+//         <h1>Post Section</h1>
+//         <ul>
+//           {postList.map(post => (
+//             <li key={post.id}>
+//               <h3>{post.title}</h3>
+//               <p>{post.description}</p>
+//             </li>
+//           ))}
+//         </ul>    
+//       </div>                          
+//     </>
+//   );
+// }
 
-        // Call fetchPost only if the token is available
-        if (token) {
-            fetchPost();
-        }
-    }, [token]);
-
-    return (
-        <>
-        <div id="homeTab">Posts</div>         
-        <div className="home">
-            <h1>Post Section </h1>
-            <ul>
-                {postList.map(post => (
-                    <li key={post.id}>
-                        <h3>{post.title}</h3>
-                        <p>{post.description}</p>
-                    </li>
-                ))}
-            </ul>    
-        </div>                          
-        </>
-    );
-}
+// export default Post;
