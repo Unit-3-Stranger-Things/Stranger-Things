@@ -10,7 +10,8 @@ function NavBar() {
         <li><Link to="/profile">Profile</Link></li>
         <li><Link to="/post">Post</Link></li>
         <li><Link to="/search">Search</Link></li>
-        <li><Link to="/logout">Sign Out</Link></li>              
+        <li><Link to="/login">Sign Out</Link></li>
+        <li><Link to="/register">Register</Link></li>             
       </ul>
     </nav>
   );

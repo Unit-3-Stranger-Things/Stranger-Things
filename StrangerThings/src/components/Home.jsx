@@ -1,8 +1,14 @@
+import React from "react";
+
 function Home() {
   return (
-    <div>
-      <h2>Welcome to Stranger Things Online Marketplace!</h2>
-      {/* Display listings, posts, etc. */}
+    <div id="homePage">
+      <div id="home">
+        <h1>Welcome to Stranger Things Online Marketplace!</h1>
+        {/* Display listings, posts, etc. */}
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtHEfHdHne3XdDwyl-tIMWp6Dn-I_ihLCQPA&usqp=CAU" 
+        alt="" />
+      </div>
     </div>
   );
 }
