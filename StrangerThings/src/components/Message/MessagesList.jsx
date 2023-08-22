@@ -1,5 +1,5 @@
 import React from "react";
-import Message from "./Message";
+import Message from "./Messages";
 
 // Define a functional component for rendering a list of messages
 const MessagesList = (props) => {

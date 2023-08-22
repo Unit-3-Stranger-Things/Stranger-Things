@@ -15,8 +15,8 @@ export default function Post({ token }) {
                 });
 
                 const result = await response.json();
-                console.log("Fetched posts:", result.data.posts);
-                setPostList(result.data.posts);
+                console.log("Fetched posts:", result); // Check the fetched result
+                setPostList(result); // Update postList with the fetched result
             } catch (err) {
                 console.error("Error fetching posts:", err);
             }
@@ -33,7 +33,7 @@ export default function Post({ token }) {
         <div>Posts</div>
         <div id="homeTab">  
         <div className="home">
-            <h1>Post Section </h1>
+            <h1>Post Section</h1>
             <ul>
                 {postList.map(post => (
                     <li key={post.id}>
