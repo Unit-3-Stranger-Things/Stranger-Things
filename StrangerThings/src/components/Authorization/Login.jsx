@@ -46,13 +46,18 @@ function Login() {
     <>
     <div id="homeTab">Please Log-in</div>
     <div className="home">
-
+    <form onSubmit={handleLogin}>
+    <div className="input-table">
+            <div className="input-row">
       <input type="username" placeholder="username" value={username} onChange={e => setUsername(e.target.value)} />
 
       <input type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} />
       <button onClick={handleLogin} className='loginTab'>Login</button>
+      </div>
+      </div>
+      </form>
     </div>
-    </div>
+    
     </>
   );
 }

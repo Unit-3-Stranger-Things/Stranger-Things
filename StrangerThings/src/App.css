@@ -79,7 +79,7 @@
   display: table-row;
 }
 .input-row {
-  display: flex;
+  display:grid;
   gap: 10px;
 }
 /* footer */

@@ -3,6 +3,9 @@ import BASE_URL from '../../API/index';
 //import {authToken, setAuth}  from '../../API/authToken';
 
 function Register() {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   console.log(BASE_URL)
@@ -16,7 +19,9 @@ function Register() {
         },
         body: JSON.stringify({
           user: {
-            
+            name,
+            email,
+            phone,
             username,
             password,
           },
@@ -46,44 +51,27 @@ function Register() {
     }
   };
 
+  
   return (
     <>
       <div id="homeTab">Sign-Up Here</div>
       <div className="home">
-
-      <input type="text" placeholder="Username" value={username} onChange={e => setUsername(e.target.value)} />
-      <input type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} />
-      <button onClick={handleRegister} className='loginTab'>Register</button>
-    </div>
-    </div>
-
-//         <table className="input-table">
-//           <tbody>
-//             <tr className="input-row">
-//               <td>
-//                 <input type="text" placeholder="Name" value={name} onChange={e => setName(e.target.value)} />
-//               </td>
-//               <td>
-//                 <input type="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} />
-//               </td>
-//               <td>
-//                 <input type="tel" placeholder="Phone" value={phone} onChange={e => setPhone(e.target.value)} />
-//               </td>
-//               <td>
-//                 <input type="text" placeholder="Username" value={username} onChange={e => setUsername(e.target.value)} />
-//               </td>
-//               <td>
-//                 <input type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} />
-//               </td>
-//               <td>
-//                 <button onClick={handleRegister} className='loginTab'>Sign Up</button>
-//               </td>
-//             </tr>
-//           </tbody>
-//         </table>
-//       </div>
+        <form onSubmit={handleRegister}>
+          <div className="input-table">
+            <div className="input-row">
+              <input type="text" placeholder="Name" value={name} onChange={e => setName(e.target.value)} />
+              <input type="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} />
+              <input type="tel" placeholder="Phone" value={phone} onChange={e => setPhone(e.target.value)} />
+              <input type="text" placeholder="Username" value={username} onChange={e => setUsername(e.target.value)} />
+              <input type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} />
+              <button type="submit" className='loginTab'>Sign Up</button>
+            </div>
+          </div>
+        </form>
+      </div>
     </>
   );
 }
+
 export default Register;
 

@@ -1,24 +1,41 @@
-import { useState, useEffect } from 'react';
-import authToken from '../../API/authToken';
-import BASE_URL from '../../API/index';
+// import { useState, useEffect } from 'react';
+// import authToken from '../../API/authToken';
+// import BASE_URL from '../../API/index';
 
-const Post = () => {
-  const [postList, setPostList] = useState([]);
+// const Post = () => {
+//   const [postList, setPostList] = useState([]);
+//   const [isLoading, setIsLoading] = useState(true);
+//   const [error, setError] = useState(null);
 
-  useEffect(() => {
-    fetch(BASE_URL, {
-      headers: {
-        'Authorization': `Bearer ${authToken}`
-      }
-    })
-    .then(response => response.json())
-    .then(data => {
-      setPostList(data); // Assuming the response is an array of posts
-    })
-    .catch(error => {
-      console.error('Error fetching data:', error);
-    });
-  }, []);
+//   useEffect(() => {
+//     fetch(BASE_URL, {
+//       headers: {
+//         'Authorization': `Bearer ${authToken}`
+//       }
+//     })
+//     .then(response => {
+//       if (!response.ok) {
+//         throw new Error('Network response was not ok');
+//       }
+//       return response.json();
+//     })
+//     .then(data => {
+//       setPostList(data); // Assuming the response is an array of posts
+//       setIsLoading(false);
+//     })
+//     .catch(error => {
+//       setError(error);
+//       setIsLoading(false);
+//     });
+//   }, []);
+
+//   if (isLoading) {
+//     return <p>Loading...</p>;
+//   }
+
+//   if (error) {
+//     return <p>Error: {error.message}</p>;
+//   }
 
 //   return (
 //     <>
