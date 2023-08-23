@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import BASE_URL from "../../API/index.js";
+//import {authToken} from '../../API/authToken.js';
 
 function Login() {
-  const [email, setEmail] = useState('');
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
   const handleLogin = async () => { 
@@ -14,7 +15,7 @@ function Login() {
         },
         body: JSON.stringify({
           user: {
-            email,
+            username,
             password,
           },
         }),
@@ -29,7 +30,14 @@ function Login() {
         // Handle login failure, e.g., display an error message
         console.error('Login failed:', data);
       }
-    } catch (error) {
+      console.log(data);
+      
+      console.log(data.data.token);
+      
+      //authToken = (data.data.token);
+    } 
+   
+    catch (error) {
       console.error('An error occurred:', error);
     }
   };
@@ -38,8 +46,9 @@ function Login() {
     <>
     <div id="homeTab">Please Log-in</div>
     <div className="home">
-    <div className="input-row">
-      <input type="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} />
+
+      <input type="username" placeholder="username" value={username} onChange={e => setUsername(e.target.value)} />
+
       <input type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} />
       <button onClick={handleLogin} className='loginTab'>Login</button>
     </div>

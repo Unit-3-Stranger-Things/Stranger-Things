@@ -1,8 +1,6 @@
-// import { useState, useEffect } from 'react';
-// import BASE_URL from '../../API/index';
-
-// const PostList = () => {
-//   const [postList, setPostList] = useState([]);
+import { useState, useEffect } from 'react';
+import authToken from '../../API/authToken';
+import BASE_URL from '../../API/index';
 
 //   useEffect(() => {
 //     // Fetch posts when the component mounts

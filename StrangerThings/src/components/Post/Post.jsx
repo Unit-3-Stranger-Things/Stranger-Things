@@ -20,22 +20,22 @@ const Post = () => {
     });
   }, []);
 
-  return (
-    <>
-      <div id="homeTab">Posts</div>         
-      <div className="home">
-        <h1>Post Section</h1>
-        <ul>
-          {postList.map(post => (
-            <li key={post.id}>
-              <h3>{post.title}</h3>
-              <p>{post.description}</p>
-            </li>
-          ))}
-        </ul>    
-      </div>                          
-    </>
-  );
-}
+//   return (
+//     <>
+//       <div id="homeTab">Posts</div>         
+//       <div className="home">
+//         <h1>Post Section</h1>
+//         <ul>
+//           {postList.map(post => (
+//             <li key={post.id}>
+//               <h3>{post.title}</h3>
+//               <p>{post.description}</p>
+//             </li>
+//           ))}
+//         </ul>    
+//       </div>                          
+//     </>
+//   );
+// }
 
-export default Post;
+// export default Post;
