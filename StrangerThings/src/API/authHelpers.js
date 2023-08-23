@@ -30,7 +30,7 @@ export const logIn = (token) => {
     if (isLoggedIn()) {
       headers['Authorization'] = `Bearer ${localStorage.getItem('token')}`;
     }
-  
+
     // Return the headers object
     return headers;
   };
