@@ -44,10 +44,11 @@ function Login() {
 
   return (
     <>
-    <div >Login</div>
-    <div id="homeTab">
+    <div id="homeTab">Please Log-in</div>
     <div className="home">
+
       <input type="username" placeholder="username" value={username} onChange={e => setUsername(e.target.value)} />
+
       <input type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} />
       <button onClick={handleLogin} className='loginTab'>Login</button>
     </div>

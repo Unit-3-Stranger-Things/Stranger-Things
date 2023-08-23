@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+
 import authToken from '../../API/authToken';
 import BASE_URL from '../../API/index';
 

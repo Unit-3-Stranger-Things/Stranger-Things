@@ -1,18 +1,25 @@
-import { useState, useEffect } from "react";
-import BASE_URL from "../../API";
+// import { useState, useEffect } from 'react';
+// import authToken from '../../API/authToken';
+// import BASE_URL from '../../API/index';
 
-export default function Post({ token }) {
-    const [postList, setPostList] = useState([]);
+// const Post = () => {
+//   const [postList, setPostList] = useState([]);
 
-    useEffect(() => {
-        async function fetchPost() {
-            try {
-                const response = await fetch(`${BASE_URL}/post`, {
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Authorization': `Bearer ${token}`
-                    }
-                });
+//   useEffect(() => {
+//     fetch(BASE_URL, {
+//       headers: {
+//         'Authorization': `Bearer ${authToken}`
+//       }
+//     })
+//     .then(response => response.json())
+//     .then(data => {
+//       setPostList(data); // Assuming the response is an array of posts
+//     })
+//     .catch(error => {
+//       console.error('Error fetching data:', error);
+//     });
+//   }, []);
+
 
                 const result = await response.json();
                 console.log("Fetched posts:", result); // Check the fetched result

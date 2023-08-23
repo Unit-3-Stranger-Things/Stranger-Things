@@ -1,15 +1,26 @@
+
+import { useHistory } from 'react-router-dom'; // Import useHistory from react-router-dom
+
 function Logout() {
-    const handleLogout = () => {
-      // Implement logout logic, such as clearing authentication tokens, etc.
-      // redirect the user to the login page.
-    };
+  const history = useHistory(); // Access the history object
   
-    return (
-      <div>
-        <h2>Logout</h2>
+  const handleLogout = () => {
+    // Implement your logout logic here (e.g., clearing tokens, etc.)
+    // For example, you can clear local storage:
+    localStorage.removeItem('authToken');
+    
+    // Redirect the user to the login page
+    history.push('/login'); // Replace 'login' with your actual login route
+  };
+
+  return (
+    <>
+      <div id="homeTab">SecureLog-Out</div>
+      <div className="home">        
         <button onClick={handleLogout}>Logout</button>
       </div>
-    );
-  }
-  
-  export default Logout;
+    </>
+  );
+}
+
+export default Logout;
