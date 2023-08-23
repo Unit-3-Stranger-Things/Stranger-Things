@@ -1,7 +1,7 @@
 import {Routes, Route} from 'react-router-dom'
 import './App.css';
 import Home from './components/Home';
-import PostList from './components/Post/PostList';
+import Post from './components/Post/Post';
 import Login from './components/Authorization/Login';
 import Messages from './components/Message/Messages';
 import Register from './components/Authorization/Register';
@@ -12,7 +12,7 @@ const App=()=>{
     <>
     <div id="main-section">
     <Routes>              
-        <Route path="/postList" element={<PostList />} />
+        <Route path="/postList" element={<Post />} />
         <Route path="/home" element={<Home />} />        
         <Route path="/messages" element={<Messages />} />        
         <Route path="/login" element={<Login/>} />

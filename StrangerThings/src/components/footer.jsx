@@ -5,7 +5,7 @@ const Footer = () => {
     <div id="footer">
       <div className="footer-links">
         <Link to="/Home" className="footer-link">Home</Link>
-        <Link to="/Post" className="footer-link">Post</Link>
+        <Link to="/postList" className="footer-link">Posts</Link>
         <Link to="/Register" className="footer-link">Register</Link>
         <Link to="/Logout" className="footer-link">Log-Out</Link>
       </div>
